@@ -84,6 +84,86 @@
         }
         .glow-brand { box-shadow: 0 0 60px rgba(245, 158, 11, 0.15); }
         .glow-accent { box-shadow: 0 0 60px rgba(99, 102, 241, 0.1); }
+
+        /* Demo Player */
+        .demo-player { max-width:100%; border-radius:16px; overflow:hidden; background:#fff; box-shadow:0 25px 50px -12px rgba(0,0,0,0.15),0 0 60px rgba(99,102,241,0.1); }
+        .demo-browser-bar { display:flex; align-items:center; padding:10px 16px; background:#f1f5f9; border-bottom:1px solid #e2e8f0; }
+        .demo-dots { display:flex; gap:6px; }
+        .demo-dots span { width:10px; height:10px; border-radius:50%; }
+        .demo-url { flex:1; text-align:center; font-size:11px; color:#94a3b8; font-family:monospace; }
+        .demo-body { display:flex; height:340px; background:#f9fafb; overflow:hidden; }
+        .demo-sidebar { width:152px; background:#fff; border-right:1px solid #e5e7eb; padding:10px 0; flex-shrink:0; }
+        .demo-sidebar-logo { display:flex; align-items:center; padding:0 10px 10px; border-bottom:1px solid #f3f4f6; margin-bottom:6px; }
+        .demo-sidebar-logo .logo-sq { width:22px; height:22px; background:#3b82f6; border-radius:5px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:10px; margin-right:6px; flex-shrink:0; }
+        .demo-sidebar-logo .logo-txt { font-size:11px; font-weight:700; color:#1f2937; }
+        .demo-nav { display:flex; flex-direction:column; gap:1px; }
+        .demo-nav-item { display:flex; align-items:center; padding:5px 10px; font-size:10.5px; color:#6b7280; cursor:default; transition:all 0.3s; white-space:nowrap; }
+        .demo-nav-item.active { color:#3b82f6; background:#eff6ff; border-right:2px solid #3b82f6; font-weight:600; }
+        .demo-nav-item svg { width:13px; height:13px; margin-right:7px; flex-shrink:0; }
+        .demo-content { flex:1; overflow:hidden; position:relative; }
+        .demo-screen { position:absolute; inset:0; padding:14px 16px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; overflow-y:auto; overflow-x:hidden; }
+        .demo-screen::-webkit-scrollbar { display:none; }
+        .demo-screen { scrollbar-width:none; }
+        .demo-screen.active { opacity:1; pointer-events:auto; }
+        .demo-controls { display:flex; justify-content:center; align-items:center; gap:8px; padding:10px; background:#fff; border-top:1px solid #f3f4f6; }
+        .demo-dot { width:7px; height:7px; border-radius:50%; background:#d1d5db; cursor:pointer; transition:all 0.3s; }
+        .demo-dot.active { background:#3b82f6; transform:scale(1.4); }
+        .demo-screen-label { font-size:10px; color:#9ca3af; min-width:80px; text-align:center; }
+        .demo-title { font-size:13px; font-weight:700; color:#111827; margin-bottom:3px; }
+        .demo-subtitle { font-size:9px; color:#9ca3af; margin-bottom:10px; }
+        .demo-kpi-row { display:flex; gap:6px; margin-bottom:10px; }
+        .demo-kpi { background:#fff; border-radius:7px; padding:7px 9px; box-shadow:0 1px 2px rgba(0,0,0,0.04); flex:1; min-width:0; }
+        .demo-kpi-label { font-size:8px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:2px; }
+        .demo-kpi-value { font-size:15px; font-weight:700; color:#111827; line-height:1.2; }
+        .demo-kpi-sub { font-size:8px; color:#10b981; font-weight:500; }
+        .demo-table { width:100%; font-size:9.5px; border-collapse:collapse; }
+        .demo-table th { text-align:left; padding:5px 6px; color:#6b7280; font-weight:600; font-size:8px; text-transform:uppercase; letter-spacing:0.3px; border-bottom:1px solid #e5e7eb; background:#fff; }
+        .demo-table td { padding:5px 6px; color:#374151; border-bottom:1px solid #f3f4f6; }
+        .demo-table tr { transition:opacity 0.3s, transform 0.3s; }
+        .demo-badge { display:inline-block; padding:1px 5px; border-radius:3px; font-size:8px; font-weight:600; white-space:nowrap; }
+        .demo-badge-green { background:#d1fae5; color:#065f46; }
+        .demo-badge-blue { background:#dbeafe; color:#1e40af; }
+        .demo-badge-amber { background:#fef3c7; color:#92400e; }
+        .demo-badge-gray { background:#f3f4f6; color:#4b5563; }
+        .demo-badge-red { background:#fee2e2; color:#991b1b; }
+        .demo-progress { height:5px; background:#e5e7eb; border-radius:3px; overflow:hidden; width:50px; display:inline-block; vertical-align:middle; }
+        .demo-progress-fill { height:100%; border-radius:3px; width:0; transition:width 1s ease; }
+        .demo-ai-card { background:linear-gradient(135deg,#fffbeb,#fff); border:1px solid #fde68a; border-radius:7px; padding:7px 9px; margin-top:8px; }
+        .demo-ai-card-title { font-size:9px; font-weight:600; color:#d97706; margin-bottom:3px; display:flex; align-items:center; gap:4px; }
+        .demo-ai-card-text { font-size:8.5px; color:#6b7280; line-height:1.4; }
+        .demo-flow-bar { height:14px; background:#e5e7eb; border-radius:7px; overflow:hidden; display:flex; margin-bottom:4px; }
+        .demo-flow-segment { height:100%; transition:width 1s ease; }
+        .demo-flow-legend { display:flex; gap:8px; flex-wrap:wrap; }
+        .demo-flow-legend-item { display:flex; align-items:center; gap:3px; font-size:8px; color:#6b7280; }
+        .demo-flow-legend-dot { width:6px; height:6px; border-radius:2px; display:inline-block; }
+        .demo-ai-btn { display:inline-flex; align-items:center; gap:4px; background:#3b82f6; color:#fff; padding:4px 10px; border-radius:5px; font-size:9.5px; font-weight:600; margin:6px 0; }
+        .demo-ai-btn.loading { animation:demo-pulse 1s ease infinite; }
+        @keyframes demo-pulse { 0%,100%{opacity:1}50%{opacity:0.6} }
+        .demo-form-field { background:#fff; border:1px solid #e5e7eb; border-radius:5px; padding:4px 8px; font-size:9.5px; color:#374151; margin-bottom:5px; }
+        .demo-form-label { font-size:8px; color:#6b7280; font-weight:600; margin-bottom:2px; text-transform:uppercase; letter-spacing:0.3px; }
+        .demo-cost-summary { background:#fff; border-radius:7px; padding:8px 10px; box-shadow:0 1px 2px rgba(0,0,0,0.04); margin-top:6px; }
+        .demo-cost-row { display:flex; justify-content:space-between; font-size:9px; color:#6b7280; padding:2px 0; }
+        .demo-cost-row.total { font-weight:700; color:#111827; font-size:10px; border-top:1px solid #e5e7eb; margin-top:3px; padding-top:4px; }
+        .demo-gantt-header { display:flex; margin-bottom:6px; padding-left:80px; }
+        .demo-gantt-header span { flex:1; font-size:8px; color:#9ca3af; text-align:center; font-weight:600; }
+        .demo-gantt-row { display:flex; align-items:center; margin-bottom:5px; }
+        .demo-gantt-label { width:80px; font-size:9px; color:#374151; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .demo-gantt-track { flex:1; height:18px; position:relative; background:#f3f4f6; border-radius:4px; }
+        .demo-gantt-bar { position:absolute; height:18px; border-radius:4px; top:0; transition:width 0.8s ease; display:flex; align-items:center; justify-content:center; font-size:7px; color:#fff; font-weight:600; }
+        .demo-material-row { opacity:0; transform:translateY(3px); transition:all 0.3s ease; }
+        .demo-material-row.visible { opacity:1; transform:translateY(0); }
+        @media (max-width:767px) {
+            .demo-sidebar { display:none; }
+            .demo-body { height:260px; }
+        }
+        @media (min-width:768px) and (max-width:1023px) {
+            .demo-sidebar { width:38px; }
+            .demo-nav-item span { display:none; }
+            .demo-nav-item { justify-content:center; padding:7px; }
+            .demo-nav-item svg { margin-right:0; }
+            .demo-sidebar-logo .logo-txt { display:none; }
+            .demo-sidebar-logo { justify-content:center; }
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-700">
@@ -177,49 +257,173 @@
                     </div>
                 </div>
 
-                <!-- App preview -->
-                <div class="relative animate-float">
-                    <div class="bg-white rounded-2xl shadow-2xl p-4 lg:p-6 glow-accent">
-                        <div class="bg-surface rounded-xl p-4">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-300"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-300"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-300"></div>
+                <!-- Demo animado -->
+                <div class="demo-player" id="demo-player">
+                    <div class="demo-browser-bar">
+                        <div class="demo-dots"><span style="background:#ef4444"></span><span style="background:#f59e0b"></span><span style="background:#22c55e"></span></div>
+                        <div class="demo-url">app.gaudimind.com</div>
+                    </div>
+                    <div class="demo-body">
+                        <div class="demo-sidebar">
+                            <div class="demo-sidebar-logo"><div class="logo-sq">G</div><span class="logo-txt">GaudiMind</span></div>
+                            <nav class="demo-nav" id="demo-nav">
+                                <div class="demo-nav-item active" data-screen="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Dashboard</span></div>
+                                <div class="demo-nav-item" data-screen="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span>Presupuestos</span></div>
+                                <div class="demo-nav-item" data-screen="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg><span>Proyectos</span></div>
+                                <div class="demo-nav-item" data-screen="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Calendario</span></div>
+                                <div class="demo-nav-item" data-screen="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>Listados</span></div>
+                                <div class="demo-nav-item" data-screen="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg><span>Manuales</span></div>
+                                <div class="demo-nav-item" data-screen="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.78l1.41-1.41m11.32-11.32l1.41-1.41"/></svg><span>Ajustes</span></div>
+                            </nav>
+                        </div>
+                        <div class="demo-content">
+                            <!-- Screen 0: Dashboard -->
+                            <div class="demo-screen active" id="demo-screen-0">
+                                <div class="demo-title">Dashboard</div>
+                                <div class="demo-subtitle">Bienvenido, Admin &middot; Demo Construcciones S.L.</div>
+                                <div class="demo-kpi-row">
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Presupuestos</div><div class="demo-kpi-value" data-count="6">0</div><div class="demo-kpi-sub" style="color:#6b7280">activos</div></div>
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Proyectos</div><div class="demo-kpi-value" data-count="2" style="color:#3b82f6">0</div><div class="demo-kpi-sub" style="color:#6b7280">en marcha</div></div>
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Cobrado</div><div class="demo-kpi-value" data-count="56" data-suffix="K" style="color:#10b981">0</div><div class="demo-kpi-sub">este ano</div></div>
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Pendiente</div><div class="demo-kpi-value" data-count="21" data-suffix="K" style="color:#f59e0b">0</div><div class="demo-kpi-sub" style="color:#f59e0b">por cobrar</div></div>
                                 </div>
-                                <span class="text-xs text-gray-300 font-medium">gaudimind.com/dashboard</span>
+                                <div style="margin-bottom:4px;font-size:9px;font-weight:600;color:#374151">Flujo financiero</div>
+                                <div class="demo-flow-bar">
+                                    <div class="demo-flow-segment" style="background:#60a5fa;width:0" data-flow="51%"></div>
+                                    <div class="demo-flow-segment" style="background:#fbbf24;width:0" data-flow="15%"></div>
+                                    <div class="demo-flow-segment" style="background:#a78bfa;width:0" data-flow="10%"></div>
+                                    <div class="demo-flow-segment" style="background:#34d399;width:0" data-flow="18%"></div>
+                                </div>
+                                <div class="demo-flow-legend">
+                                    <div class="demo-flow-legend-item"><span class="demo-flow-legend-dot" style="background:#e5e7eb"></span>177K Presup.</div>
+                                    <div class="demo-flow-legend-item"><span class="demo-flow-legend-dot" style="background:#60a5fa"></span>91K Trabajo</div>
+                                    <div class="demo-flow-legend-item"><span class="demo-flow-legend-dot" style="background:#fbbf24"></span>26K Certif.</div>
+                                    <div class="demo-flow-legend-item"><span class="demo-flow-legend-dot" style="background:#34d399"></span>56K Cobrado</div>
+                                </div>
+                                <div class="demo-ai-card">
+                                    <div class="demo-ai-card-title">&#129504; Gaudi Mind sugiere</div>
+                                    <div class="demo-ai-card-text">"El proyecto PRO-2024-001 lleva 3 dias de retraso. Recomiendo asignar 1 oficial adicional para cumplir plazos."</div>
+                                </div>
                             </div>
 
-                            <div class="grid grid-cols-3 gap-3 mb-4">
-                                <div class="bg-white rounded-lg p-3 shadow-sm">
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wide">Presupuestos</p>
-                                    <p class="text-xl font-bold text-gray-900">24</p>
-                                    <p class="text-[10px] text-emerald-500 font-medium">+12% este mes</p>
+                            <!-- Screen 1: Presupuestos lista -->
+                            <div class="demo-screen" id="demo-screen-1">
+                                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px">
+                                    <div class="demo-title">Presupuestos</div>
+                                    <div class="demo-ai-btn" style="margin:0;font-size:8px;padding:3px 8px">+ Nuevo</div>
                                 </div>
-                                <div class="bg-white rounded-lg p-3 shadow-sm">
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wide">Proyectos</p>
-                                    <p class="text-xl font-bold text-accent">8</p>
-                                    <p class="text-[10px] text-gray-400">activos</p>
+                                <div class="demo-subtitle">Gestiona tus presupuestos con IA</div>
+                                <div class="demo-kpi-row" style="margin-bottom:8px">
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Aprobados</div><div class="demo-kpi-value" style="color:#10b981;font-size:13px">2</div></div>
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Pendientes</div><div class="demo-kpi-value" style="color:#f59e0b;font-size:13px">3</div></div>
+                                    <div class="demo-kpi"><div class="demo-kpi-label">Vol. aprobado</div><div class="demo-kpi-value" style="color:#10b981;font-size:11px">91.140 &euro;</div></div>
                                 </div>
-                                <div class="bg-white rounded-lg p-3 shadow-sm">
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wide">Facturacion</p>
-                                    <p class="text-xl font-bold text-emerald-600">47K</p>
-                                    <p class="text-[10px] text-emerald-500 font-medium">+8%</p>
+                                <table class="demo-table">
+                                    <thead><tr><th>Codigo</th><th>Proyecto</th><th>Importe</th><th>Estado</th></tr></thead>
+                                    <tbody>
+                                        <tr><td style="font-family:monospace;font-size:8.5px">PRE-2024-001</td><td>Reforma oficinas Mayor</td><td>53.100 &euro;</td><td><span class="demo-badge demo-badge-green">Aprobado</span></td></tr>
+                                        <tr><td style="font-family:monospace;font-size:8.5px">PRE-2024-002</td><td>Rehab. fachada edificio</td><td>40.200 &euro;</td><td><span class="demo-badge demo-badge-blue">Enviado</span></td></tr>
+                                        <tr><td style="font-family:monospace;font-size:8.5px">PRE-2024-003</td><td>Nave industrial 500m&sup2;</td><td>135.700 &euro;</td><td><span class="demo-badge demo-badge-amber">Negociacion</span></td></tr>
+                                        <tr><td style="font-family:monospace;font-size:8.5px">PRE-2024-004</td><td>Reforma banos hotel</td><td>55.510 &euro;</td><td><span class="demo-badge demo-badge-gray">Borrador</span></td></tr>
+                                        <tr><td style="font-family:monospace;font-size:8.5px">PRE-2025-006</td><td>Climatizacion oficinas</td><td>38.040 &euro;</td><td><span class="demo-badge demo-badge-green">Aprobado</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Screen 2: Presupuesto IA -->
+                            <div class="demo-screen" id="demo-screen-2">
+                                <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+                                    <span style="color:#9ca3af;font-size:12px">&#8592;</span>
+                                    <span style="font-family:monospace;font-size:10px;color:#6b7280">PRE-2024-001</span>
+                                    <span class="demo-badge demo-badge-green">Aprobado</span>
+                                </div>
+                                <div class="demo-form-label">Proyecto</div>
+                                <div class="demo-form-field">Reforma integral oficinas Calle Mayor</div>
+                                <div class="demo-form-label">Cliente</div>
+                                <div class="demo-form-field">Constructora Garcia S.A.</div>
+                                <div class="demo-ai-btn" id="demo-ai-btn">&#10024; Generar con IA</div>
+                                <div id="demo-materials" style="margin-top:4px">
+                                    <table class="demo-table" style="font-size:9px">
+                                        <thead><tr><th>Material</th><th>Cant.</th><th>Precio</th><th>Total</th></tr></thead>
+                                        <tbody>
+                                            <tr class="demo-material-row"><td>Cemento Portland</td><td>50 kg</td><td>0,15 &euro;</td><td>7,50 &euro;</td></tr>
+                                            <tr class="demo-material-row"><td>Arena fina</td><td>2 m&sup3;</td><td>25 &euro;</td><td>50,00 &euro;</td></tr>
+                                            <tr class="demo-material-row"><td>Ladrillo ceramico</td><td>500 ud</td><td>0,45 &euro;</td><td>225,00 &euro;</td></tr>
+                                            <tr class="demo-material-row"><td>Pintura plastica</td><td>25 L</td><td>8,50 &euro;</td><td>212,50 &euro;</td></tr>
+                                            <tr class="demo-material-row"><td>Perfil metalico</td><td>30 m</td><td>12 &euro;</td><td>360,00 &euro;</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="demo-cost-summary" id="demo-cost-summary" style="opacity:0;transition:opacity 0.3s">
+                                    <div class="demo-cost-row"><span>Materiales</span><span>1.387 &euro;</span></div>
+                                    <div class="demo-cost-row"><span>Mano de obra</span><span>8.960 &euro;</span></div>
+                                    <div class="demo-cost-row"><span>Margen (18%)</span><span>1.862 &euro;</span></div>
+                                    <div class="demo-cost-row total"><span>Total oferta</span><span>12.209 &euro;</span></div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-r from-brand-light to-white rounded-lg p-3 border border-brand/20">
-                                <div class="flex items-center mb-1.5">
-                                    <span class="text-sm mr-1.5">🧠</span>
-                                    <span class="text-[11px] font-semibold text-brand-dark">Gaudi Mind sugiere</span>
+                            <!-- Screen 3: Proyectos -->
+                            <div class="demo-screen" id="demo-screen-3">
+                                <div class="demo-title">Proyectos</div>
+                                <div class="demo-subtitle">Gestiona tus proyectos activos</div>
+                                <table class="demo-table">
+                                    <thead><tr><th>Codigo</th><th>Nombre</th><th>Progreso</th><th>Presup.</th><th>Estado</th></tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-family:monospace;font-size:8.5px">PRO-2024-001</td>
+                                            <td>Reforma oficinas Mayor</td>
+                                            <td><div class="demo-progress"><div class="demo-progress-fill" style="background:#3b82f6" data-width="38%"></div></div> <span style="font-size:8px">38%</span></td>
+                                            <td>53.100 &euro;</td>
+                                            <td><span class="demo-badge demo-badge-green">Activo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family:monospace;font-size:8.5px">PRO-2025-002</td>
+                                            <td>Inst. electrica nave</td>
+                                            <td><div class="demo-progress"><div class="demo-progress-fill" style="background:#3b82f6" data-width="53%"></div></div> <span style="font-size:8px">53%</span></td>
+                                            <td>42.000 &euro;</td>
+                                            <td><span class="demo-badge demo-badge-green">Activo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family:monospace;font-size:8.5px">PRO-2025-003</td>
+                                            <td>Reforma local Centro</td>
+                                            <td><div class="demo-progress"><div class="demo-progress-fill" style="background:#9ca3af" data-width="0%"></div></div> <span style="font-size:8px">0%</span></td>
+                                            <td>28.500 &euro;</td>
+                                            <td><span class="demo-badge demo-badge-gray">Planificacion</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family:monospace;font-size:8.5px">PRO-2024-015</td>
+                                            <td>Reforma cocina restaurante</td>
+                                            <td><div class="demo-progress"><div class="demo-progress-fill" style="background:#10b981" data-width="100%"></div></div> <span style="font-size:8px">100%</span></td>
+                                            <td>38.000 &euro;</td>
+                                            <td><span class="demo-badge demo-badge-green">Completado</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Screen 4: Calendario Gantt -->
+                            <div class="demo-screen" id="demo-screen-4">
+                                <div class="demo-title">Calendario</div>
+                                <div class="demo-subtitle">PRO-2024-001 &middot; Reforma oficinas Calle Mayor</div>
+                                <div class="demo-gantt-header"><span>Sem 1</span><span>Sem 2</span><span>Sem 3</span><span>Sem 4</span></div>
+                                <div class="demo-gantt-row"><div class="demo-gantt-label">Demolicion</div><div class="demo-gantt-track"><div class="demo-gantt-bar" style="background:#ef4444;left:0%;width:0" data-gantt="22%">2d</div></div></div>
+                                <div class="demo-gantt-row"><div class="demo-gantt-label">Albanileria</div><div class="demo-gantt-track"><div class="demo-gantt-bar" style="background:#3b82f6;left:18%;width:0" data-gantt="40%">5d</div></div></div>
+                                <div class="demo-gantt-row"><div class="demo-gantt-label">Inst. electrica</div><div class="demo-gantt-track"><div class="demo-gantt-bar" style="background:#f59e0b;left:45%;width:0" data-gantt="28%">3d</div></div></div>
+                                <div class="demo-gantt-row"><div class="demo-gantt-label">Pintura</div><div class="demo-gantt-track"><div class="demo-gantt-bar" style="background:#10b981;left:60%;width:0" data-gantt="30%">4d</div></div></div>
+                                <div class="demo-gantt-row"><div class="demo-gantt-label">Acabados</div><div class="demo-gantt-track"><div class="demo-gantt-bar" style="background:#8b5cf6;left:78%;width:0" data-gantt="22%">2d</div></div></div>
+                                <div class="demo-ai-card" style="margin-top:10px">
+                                    <div class="demo-ai-card-title">&#129504; Alerta IA</div>
+                                    <div class="demo-ai-card-text">"Prevision de lluvia el jueves. Recomiendo adelantar los trabajos de fachada exterior."</div>
                                 </div>
-                                <p class="text-[11px] text-gray-600 leading-relaxed">"Para la reforma del Hotel Mar, recomiendo 2 oficiales de climatizacion y prever 3 dias extra por condiciones meteorologicas."</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-accent to-accent-dark text-white px-4 py-1.5 rounded-full font-semibold text-xs shadow-lg shadow-accent/30">
-                        IA incluida
+                    <div class="demo-controls">
+                        <div class="demo-dot active" data-idx="0"></div>
+                        <div class="demo-dot" data-idx="1"></div>
+                        <div class="demo-dot" data-idx="2"></div>
+                        <div class="demo-dot" data-idx="3"></div>
+                        <div class="demo-dot" data-idx="4"></div>
                     </div>
                 </div>
             </div>
@@ -722,6 +926,110 @@
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "127" },
         "description": "La mente maestra que gestiona tus obras. Software con IA para subcontratistas de construccion."
     }
+    </script>
+
+    <!-- Demo Player JS -->
+    <script>
+    (function() {
+        var player = document.getElementById('demo-player');
+        if (!player) return;
+        var screens = player.querySelectorAll('.demo-screen');
+        var dots = player.querySelectorAll('.demo-dot');
+        var navItems = player.querySelectorAll('.demo-nav-item');
+        var screenCount = screens.length;
+        var currentScreen = 0;
+        var interval = null;
+        // Map: screen index -> nav item index
+        var screenToNav = [0, 1, 1, 2, 3];
+
+        function goToScreen(idx) {
+            screens[currentScreen].classList.remove('active');
+            dots[currentScreen].classList.remove('active');
+            currentScreen = idx;
+            screens[currentScreen].classList.add('active');
+            dots[currentScreen].classList.add('active');
+            navItems.forEach(function(n) { n.classList.remove('active'); });
+            var navIdx = screenToNav[currentScreen];
+            if (navIdx !== undefined && navItems[navIdx]) navItems[navIdx].classList.add('active');
+            animateScreen(currentScreen);
+        }
+
+        function nextScreen() { goToScreen((currentScreen + 1) % screenCount); }
+
+        function startAutoPlay() { stopAutoPlay(); interval = setInterval(nextScreen, 7000); }
+        function stopAutoPlay() { if (interval) { clearInterval(interval); interval = null; } }
+
+        dots.forEach(function(dot, i) {
+            dot.addEventListener('click', function() { goToScreen(i); startAutoPlay(); });
+        });
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) { startAutoPlay(); animateScreen(currentScreen); }
+                else { stopAutoPlay(); }
+            });
+        }, { threshold: 0.3 });
+        observer.observe(player);
+
+        function animateScreen(idx) {
+            var screen = screens[idx];
+            // Count-up KPI values
+            screen.querySelectorAll('[data-count]').forEach(function(el) {
+                var target = parseInt(el.dataset.count);
+                var suffix = el.dataset.suffix || '';
+                var current = 0;
+                var step = Math.max(1, Math.ceil(target / 25));
+                var timer = setInterval(function() {
+                    current += step;
+                    if (current >= target) { current = target; clearInterval(timer); }
+                    el.textContent = current + suffix;
+                }, 40);
+            });
+            // Progress bars (Proyectos screen)
+            screen.querySelectorAll('.demo-progress-fill[data-width]').forEach(function(el, i) {
+                el.style.width = '0';
+                setTimeout(function() { el.style.width = el.dataset.width; }, 100 + i * 150);
+            });
+            // Flow segments (Dashboard)
+            screen.querySelectorAll('.demo-flow-segment[data-flow]').forEach(function(el, i) {
+                el.style.width = '0';
+                setTimeout(function() { el.style.width = el.dataset.flow; }, 200 + i * 200);
+            });
+            // AI generation animation (Screen 2)
+            if (idx === 2) {
+                var btn = document.getElementById('demo-ai-btn');
+                var materials = screen.querySelectorAll('.demo-material-row');
+                var costSummary = document.getElementById('demo-cost-summary');
+                if (btn) { btn.classList.remove('loading'); btn.innerHTML = '&#10024; Generar con IA'; }
+                materials.forEach(function(r) { r.classList.remove('visible'); });
+                if (costSummary) costSummary.style.opacity = '0';
+                setTimeout(function() { if (btn) { btn.classList.add('loading'); btn.innerHTML = '&#9203; Generando...'; } }, 800);
+                setTimeout(function() { if (btn) { btn.classList.remove('loading'); btn.innerHTML = '&#9989; Generado'; } }, 2000);
+                materials.forEach(function(row, i) {
+                    setTimeout(function() { row.classList.add('visible'); }, 2200 + i * 300);
+                });
+                setTimeout(function() { if (costSummary) costSummary.style.opacity = '1'; }, 2200 + materials.length * 300 + 200);
+            }
+            // Gantt bars (Screen 4)
+            if (idx === 4) {
+                screen.querySelectorAll('.demo-gantt-bar[data-gantt]').forEach(function(el, i) {
+                    el.style.width = '0';
+                    setTimeout(function() { el.style.width = el.dataset.gantt; }, 300 + i * 200);
+                });
+            }
+            // Table row animation (Screens 1 and 3)
+            if (idx === 1 || idx === 3) {
+                screen.querySelectorAll('.demo-table tbody tr').forEach(function(row, i) {
+                    row.style.opacity = '0';
+                    row.style.transform = 'translateY(4px)';
+                    setTimeout(function() { row.style.opacity = '1'; row.style.transform = 'translateY(0)'; }, 100 + i * 100);
+                });
+            }
+        }
+
+        setTimeout(function() { animateScreen(0); }, 500);
+        startAutoPlay();
+    })();
     </script>
 
     <script>
