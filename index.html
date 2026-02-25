@@ -638,8 +638,8 @@
             <div id="waitlist-form-container">
                 <form class="max-w-md mx-auto mb-8" onsubmit="handleWaitlistSubmit(event)">
                     <div class="flex flex-col sm:flex-row gap-3">
-                        <input type="email" placeholder="Tu email de trabajo" required class="flex-1 px-6 py-4 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-brand/30 bg-white">
-                        <button type="submit" class="gradient-cta-btn text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-brand/30 hover:shadow-brand/50 hover:scale-105 transition-all whitespace-nowrap">Quiero acceso</button>
+                        <input type="email" id="waitlist-email" name="EMAIL" placeholder="Tu email de trabajo" required class="flex-1 px-6 py-4 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-brand/30 bg-white">
+                        <button type="submit" id="waitlist-btn" class="gradient-cta-btn text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-brand/30 hover:shadow-brand/50 hover:scale-105 transition-all whitespace-nowrap">Quiero acceso</button>
                     </div>
                 </form>
             </div>
@@ -744,9 +744,30 @@
 
         function handleWaitlistSubmit(event) {
             event.preventDefault();
-            document.getElementById('waitlist-form-container').classList.add('hidden');
-            document.getElementById('waitlist-success').classList.remove('hidden');
-            lucide.createIcons();
+            const email = document.getElementById('waitlist-email').value;
+            const btn = document.getElementById('waitlist-btn');
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+
+            const formData = new FormData();
+            formData.append('EMAIL', email);
+            formData.append('email_address_check', '');
+            formData.append('locale', 'es');
+            formData.append('html_type', 'simple');
+
+            fetch('https://bef0109a.sibforms.com/serve/MUIFAEg87m3gxeq3b1SxXFF0gr-NVBjKIJqGxZuQpfmY5CsyOiIM0iqAuUHJl6bIwkdJjGh1lWrHZMXoV8Q1wzNCnKsPoSmPRbHTG7SvZfTvG7ky1LP0Weam-IFZRDjnNpcVPrGbloU6mds6SxS8kKbe8yEEoG6NprbOFSTwEsYOyB0JrGALQdFNOBIHAlp8ZV9Gy7rPJ0QkLeRCcg==', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                document.getElementById('waitlist-form-container').classList.add('hidden');
+                document.getElementById('waitlist-success').classList.remove('hidden');
+                lucide.createIcons();
+            }).catch(() => {
+                document.getElementById('waitlist-form-container').classList.add('hidden');
+                document.getElementById('waitlist-success').classList.remove('hidden');
+                lucide.createIcons();
+            });
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
